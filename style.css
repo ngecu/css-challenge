@@ -151,6 +151,7 @@ button {
   text-align: center;
   padding: 20px;
   background-color: #fff;
+  border: solid #23A6F0;
   border-radius: 10px;
   transition: transform 0.2s ease-in-out;
   border-radius: 10px;
@@ -183,9 +184,10 @@ button {
 }
 
 .featured {
-  background-color: #222;
+  background-color: #252B42;
   transform: scale(1.05); /* Zoom in slightly */
   z-index: 1;
+  color: white;
 }
 
 .x .PSS {
@@ -270,12 +272,14 @@ button {
 .dark-background .upper {
   display: flex;
 }
-.dark-background .appointment-container {
+
+.appointment-container {
   display: grid;
   grid-template-columns: 30% 70%;
 }
-.dark-background .appointment-container img {
+.appointment-container img {
   width: 100%;
+  height: 700px;
 }
 
 .d-flex {
@@ -311,9 +315,13 @@ footer a {
 }
 
 .appointment-r form {
-  background-color: black;
+  background-color: white;
   padding: 5%;
   margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .form-group {
@@ -381,4 +389,21 @@ button:hover {
 
 .industry {
   padding: 6% 0;
+}
+
+.pricing-options {
+  display: grid;
+  grid-template-columns: 2% 98%;
+}
+.pricing-options ion-icon {
+  font-size: 24px;
+}
+
+.right-tick ion-icon {
+  font-size: 24px;
+  color: #01a807;
+}
+
+.dark-background {
+  padding: 5% 0;
 }/*# sourceMappingURL=style.css.map */
