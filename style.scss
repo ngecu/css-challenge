@@ -6,6 +6,18 @@
 // }
 body{
     background-color: #FAFAFA;
+    margin: 0;
+    padding: 0;
+    color: #252B42;
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+.muted{
+    color: #737373;
+
+}
+.h1-section{
+    font-size: 65px;
 }
 .section-1{
     background-image: url('images/hero-cover.png');
@@ -32,6 +44,7 @@ body{
         a{
             text-decoration: none;
             color: white;
+            font-weight: 400;
             
         }
 
@@ -56,11 +69,11 @@ body{
         margin: 16% 6%;
 
         h1{
-            font-size: 99px;
+            font-size: 83px;
             margin: 5% 0;
         }
         p{
-            font-size: 23px;
+            font-size: 20px;
             margin: 0 14%;
         }
         button{
@@ -79,7 +92,8 @@ body{
 }
 
 button.primary{
-    padding: .5rem 1rem;
+    // padding: .5rem 1rem;
+    padding: 1rem;
     font-size: 1.25rem;
     border-radius: .3rem;
     color: #fff;
@@ -170,21 +184,23 @@ transition: color .15s ease-in-out,background-color .15s ease-in-out,border-colo
   .pricing-cards {
       display: flex;
       justify-content: space-between;
-
+      flex-wrap: wrap;
       padding: 20px;
+      gap: 20px;
 
     }
     
     .pricing-card {
       flex: 1;
       text-align: center;
-      padding: 20px;
+      padding: 6% 20px;
       background-color: #fff;
-      border: solid #23A6F0;
+      border: solid #23A6F0 2px;
       border-radius: 10px;
       transition: transform 0.2s ease-in-out;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      
     }
     
     .pricing-card h2 {
@@ -200,6 +216,46 @@ transition: color .15s ease-in-out,background-color .15s ease-in-out,border-colo
     .price {
       font-size: 24px;
       font-weight: bold;
+      color: #007bff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .price-tag {
+        display: flex;
+        // flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 4rem;
+    }
+    
+    .top-half {
+        flex: 1;
+        display: flex;
+        align-items: flex-end;
+    }
+    
+    .top-half span {
+        font-size: 1.5rem;
+        margin-right: 5px;
+    }
+    
+    .bottom-half {
+        flex: 1;
+        display: flex;
+        align-items: flex-start;
+    }
+    
+    .bottom-half span {
+        font-size: 1rem;
+        margin-left: 5px;
+    }
+    
+    .center {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
     }
     
     .button {
@@ -213,42 +269,57 @@ transition: color .15s ease-in-out,background-color .15s ease-in-out,border-colo
     }
     
     .featured {
+
+        &:hover{
       background-color: #252B42;
-      transform: scale(1.05); /* Zoom in slightly */
+      transform: scale(1.55); /* Zoom in slightly */
       z-index: 1;
       color: white;
+      cursor: pointer;
+        }
+        button{
+            width: 86%;
+            padding: 1rem;
+
+        }
     }
 
     .x{
 
         .PSS{
-            display: grid;
+            display: flex;
             grid-template-columns: 33% 33% 33%;
             gap: 20px;
             position: relative;
             top: -110px;
+            justify-content: space-around;
+            flex-wrap: wrap;
             ion-icon {
                 font-size: 64px;
                 color: #007bff;
               }
-              .Satisfcation-Card{
-                background-color:  #007bff;
-                color: white;
-                ion-icon {
-                    
-                    color: white;
-                  }
-              }
+            //   .Satisfcation-Card{
+               
+            //   }
         }
     }
 
     .card {
-        width: 300px; 
+        // width: 300px; 
         padding: 30px;
         // border: 1px solid #ccc; 
         // border-radius: 8px; 
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
         background-color: #fff; 
+        &:hover{
+            background-color:  #007bff;
+            color: white;
+            cursor: pointer;
+            ion-icon {
+                
+                color: white;
+              }
+        }
       }
 
 
@@ -257,10 +328,11 @@ transition: color .15s ease-in-out,background-color .15s ease-in-out,border-colo
         justify-content: space-around; 
         align-items: center; 
         gap: 20px;
+        flex-wrap: wrap;
     }
     
     .card-1, .card-2, .card-3 {
-        flex: 1;
+       
         text-align: center;
         padding: 20px;
         border-radius: 10px; 
@@ -275,6 +347,7 @@ transition: color .15s ease-in-out,background-color .15s ease-in-out,border-colo
     }
     .testimonial-container{
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around; 
         align-items: center; 
         gap: 20px;
@@ -286,28 +359,35 @@ transition: color .15s ease-in-out,background-color .15s ease-in-out,border-colo
         border-radius: 10px; 
     }
 
-    .brand-products{
+    .brand-products {
         display: flex;
         gap: 20px;
-        div{
-            flex-grow: 1;
-            // img{
-            //     width: 100px;
-            // }
+        margin: 0 5% 2% 5%;
+      
+        div {
+          flex-grow: 1;
+      
+          img {
+            width: 45%; /* Set the width to 100% to make all images the same width */
+            height: 70%; /* Automatically calculate the height to maintain aspect ratio */
+            display: block; /* Remove extra spacing caused by inline elements */
+          }
         }
-    }
+      }
+      
 
-    .sub-container{
-        display: flex;
-        justify-content: space-between;
-        padding: 3%;
-    }
+
 
     .dark-background{
         background-color: #252B42;
         color: white;
+        height: 70vh;
+        padding: 10% 0;
         .upper{
             display: flex;
+        }
+        h1{
+            font-size: 35px;
         }
 
     }
@@ -317,17 +397,21 @@ transition: color .15s ease-in-out,background-color .15s ease-in-out,border-colo
         grid-template-columns:  30% 70%;
         img{
             width: 100%;
-            height: 700px;
+            height: 715px;
         }
     }
     .d-flex{
         display: flex;
         justify-content: space-between;
+        h1{
+            font-size: 35px;
+        }
     }
 
     .reserve{
         display: flex;
         justify-content: space-between;
+        align-items: center;
         .social-icons{
             display: flex;
             gap: 10px;
@@ -345,13 +429,27 @@ transition: color .15s ease-in-out,background-color .15s ease-in-out,border-colo
     }
 
     footer{
+        background-color: white;
+        padding: 2% 0;
+        .container{
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        ion-icon {
+            font-size: 24px;
+            color: #007bff;
+          }
+        .muted{
+            display: flex;
+            gap: 10px;
+        }
         a{
-            color: black;
+           
             text-decoration: none;
             padding: 1%;
+            font-weight: 600;
         }
+    }
     }
 
 
@@ -359,12 +457,15 @@ transition: color .15s ease-in-out,background-color .15s ease-in-out,border-colo
     .appointment-r form {
         // max-width: 300px;
         background-color: white;
-        padding: 5%;
+        padding: 0 5%;
         margin: 0 auto;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        h1{
+            text-align: center;
+        }
     }
     
     .form-group {
@@ -374,27 +475,30 @@ transition: color .15s ease-in-out,background-color .15s ease-in-out,border-colo
     label {
         font-weight: bold;
         display: block;
+        margin:2% 0;
     }
     
     input[type="text"],
     input[type="email"],
     select {
-        width: 100%;
-        padding: 10px;
+       
+        padding: 20px;
         border: 1px solid #ccc;
         border-radius: 4px;
         font-size: 16px;
+        background-color: #F9F9F9;
+        color:#737373;
+    }
+    select{
+        width: 100%;
+    }
+    input[type="text"],
+    input[type="email"]{
+        width: 87%;
     }
     
-    select {
-        appearance: none;
-        background: transparent;
-        background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5H7z'/></svg>");
-        background-repeat: no-repeat;
-        background-position: right center;
-        background-size: 18px;
-        padding-right: 30px;
-    }
+    
+
     
     // button {
     //     background-color: #007bff;
@@ -410,19 +514,31 @@ transition: color .15s ease-in-out,background-color .15s ease-in-out,border-colo
         background: linear-gradient(to right, #054688, #D31589);
         color: white;
 
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 3%;
+            align-items: center;
+        
+
+
         .input-group {
-            display: flex; /* Make the input and button align horizontally */
-            align-items: center; /* Vertically center elements within the input group */
-            margin-bottom: 20px; /* Add spacing between input groups if needed */
+            display: flex; 
+            align-items: center; 
+            margin-bottom: 20px; 
             border: solid white 0.5px;
+            border-radius: 5px;
+            background-color: white;
         }
         
-        /* Style the form control */
+        
         .form-control {
-            flex: 1; /* Allow the input to expand and take available space */
-            padding: 10px; /* Add padding to the input */
-            border: 1px solid #ccc; /* Add a border to the input */
-            border-radius: 4px; /* Add border radius */
+            flex: 1;
+            padding: 10px; 
+            border: 0; 
+            outline: 0;
+            border-radius: 4px; 
+            background-color: white;
         }
 
 
@@ -445,25 +561,133 @@ transition: color .15s ease-in-out,background-color .15s ease-in-out,border-colo
     }
 
     .industry{
-        padding: 6% 0;
+        padding: 2% 0;
     }
     .pricing-options{
-        display: grid;
-        grid-template-columns: 2% 98%;
+        display: flex;
+        grid-template-columns: 13% 98%;
+        margin: 6%;
+        text-align: left;
+        align-content: center;
+        align-items: center;
+        
         ion-icon {
-            font-size: 24px;
+            font-size: 34px;
         }
+        
     }
     .right-tick{
 
         ion-icon {
-            font-size: 24px;
+            font-size: 34px;
             color: #01a807;
           }
 
     }
+    .grey-tick{
+        ion-icon {
+            font-size: 34px;
+            color: #BDBDBD;
+          }
+    }
 
+
+
+
+    .globe-section{
+        position: relative;
+        top: -500px;
+        height: 50vh;
+        .lower{
+            margin: 5%;
+        }
+    }
+
+    footer{
+        ul{
+            padding: 0;
+            li{
+                margin: 5% 0%;
+            }
+        }
+        
+    }
+
+
+    @media screen and (max-width: 768px) {
+        body{
+            overflow-x:hidden ;
+        }
+        .container{
+            margin: 0;
+        }
+        .d-flex,.reserve{
+            padding: 0 2%;
+            h1{
+                font-size: 22px;
+            }
+        }
+        .globe-section{
+            position: relative;
+            top: 0;
+            .appointment-container{
+                display: grid;
+                grid-template-columns:100%;
+                .appointment-l{
+                    display: none;
+                }
+            }
+        }
+        .brand-products div img {
+            width: 70%;
+            height: 100%;
+            display: block;
+          }
+
+        .menu-list,.user-actions{
+            display: none;
+        }
+        .section-1 {
+            height: auto;
+            .slogan-text {
+                margin: 0;
+                h1{
+            
+                font-size: 20px;
+            
+        }
+        p{
+            font-size: 14px;
+        }
+        .buttons-holder{
+            button{
+                font-size: 0.8rem;
+            }
+        }
+    }
+    }
+
+    .x .container{
+        margin: 0;
+        
+        .PSS{
+            position: relative;
+            top: 0;
+            padding-bottom: 10%;
+        }
+    }
     .dark-background{
-        // height: 100vh;
-        padding: 5% 0;
+        height: auto;
+        .world-image-container{
+            display: none;
+        }
+    }
+    .appointment-r{
+        form{
+            padding-bottom: 10%;
+        }
+    }
+   
+
+  
     }
